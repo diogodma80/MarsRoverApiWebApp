@@ -7,7 +7,7 @@ public class HomeDto {
 	private Boolean cameraFhaz;
 	private Boolean cameraRhaz;
 	private Boolean cameraMast;
-	private Boolean cameraChecmcam;
+	private Boolean cameraChemcam;
 	private Boolean cameraMahli;
 	private Boolean cameraMardi;
 	private Boolean cameraNavcam;
@@ -54,12 +54,12 @@ public class HomeDto {
 		this.cameraMast = cameraMast;
 	}
 
-	public Boolean getCameraChecmcam() {
-		return cameraChecmcam;
+	public Boolean getCameraChemcam() {
+		return cameraChemcam;
 	}
 
-	public void setCameraChecmcam(Boolean cameraChecmcam) {
-		this.cameraChecmcam = cameraChecmcam;
+	public void setCameraChemcam(Boolean cameraChemcam) {
+		this.cameraChemcam = cameraChemcam;
 	}
 
 	public Boolean getCameraMahli() {
