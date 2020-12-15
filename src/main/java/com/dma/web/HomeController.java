@@ -34,6 +34,7 @@ public class HomeController {
 		
 		model.addAttribute("roverResponse", roverResponse);
 		model.addAttribute("homeDto", homeDto);
+		model.addAttribute("validCameras", roverService.getValidCameras().get(homeDto.getMarsApiRoverData()));
 		
 		return "index";
 	}

@@ -21,13 +21,11 @@ public class MarsRoverApiService {
 	private static String API_KEY = "BzevhBdgtUbMMaTJ01k6XTmwtf9oi1cdI4jRaaQd";
 	
 	private Map<String, List<String>> validCameras = new HashMap<>();
-	
-	
 
 	public MarsRoverApiService() {
-		validCameras.put("Opportunity", Arrays.asList("FHAZ", "RHAZ", "NAVCAM", "PANCAM", "MINITIES"));
+		validCameras.put("Opportunity", Arrays.asList("FHAZ", "RHAZ", "NAVCAM", "PANCAM", "MINITES"));
 		validCameras.put("Curiosity", Arrays.asList("FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM"));
-		validCameras.put("Spirit", Arrays.asList("FHAZ", "RHAZ", "NAVCAM", "PANCAM", "MINITIES"));
+		validCameras.put("Spirit", Arrays.asList("FHAZ", "RHAZ", "NAVCAM", "PANCAM", "MINITES"));
 	}
 
 	public MarsRoverApiResponse getRoverData(HomeDto homeDto) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
@@ -68,6 +66,13 @@ public class MarsRoverApiService {
 			}
 		}
 		return urls;
+	}
+	
+
+	public Map<String, List<String>> getValidCameras() {
+		
+		
+		return validCameras;
 	}
 	
 }
