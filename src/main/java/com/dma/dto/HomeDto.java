@@ -13,6 +13,7 @@ public class HomeDto {
 	private Boolean cameraNavcam;
 	private Boolean cameraPancam;
 	private Boolean cameraMinites;
+	private Boolean rememberPreferences;
 
 	public String getMarsApiRoverData() {
 		return marsApiRoverData;
@@ -100,6 +101,14 @@ public class HomeDto {
 
 	public void setCameraMinites(Boolean cameraMinites) {
 		this.cameraMinites = cameraMinites;
+	}
+
+	public Boolean getRememberPreferences() {
+		return rememberPreferences;
+	}
+
+	public void setRememberPreferences(Boolean rememberPreferences) {
+		this.rememberPreferences = rememberPreferences;
 	}
 
 }

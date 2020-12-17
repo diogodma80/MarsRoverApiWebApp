@@ -24,8 +24,12 @@ let marsRoverType = getUrlParameter("marsApiRoverData")
 highlightButtonByRoverType(marsRoverType)
 
 // sets the input field back to the last number before hitting the submit button instead of fall back to default 1
+
 let marsSol = getUrlParameter('marsSol')
-document.getElementById('marsSol').value = marsSol
+if(marsSol != null && marsSol != '' && marsSol >= 0) {
+	document.getElementById('marsSol').value = marsSol
+}
+
 
 function highlightButtonByRoverType(roverType) {
 	// if page loaded for the first time, set the default button and change the css class to primary
