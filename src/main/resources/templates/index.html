@@ -13,9 +13,10 @@
 	<div class="container">
 
 		<h2>Welcome to the Mars Rover API Web Application</h2>
-		<form method="get" action="" id="formRoverType">
+		<form method="post" action="" id="formRoverType">
 			<input type="hidden" th:field="${homeDto.marsApiRoverData}">
-			<div class="btn-group-btn-group-lg" role="group" aria-label="Basic example" style="margin: 2em">
+			<input type="hidden" th:field="${homeDto.userId}">
+			<div class="btn-group-btn-group-lg" role="group" aria-label="Basic example" style="margin: 2em 0em">
 				<button type="button" class="btn btn-secondary" id="marsApiCuriosity">Curiosity</button>
 				<button type="button" class="btn btn-secondary" id="marsApiOpportunity">Opportunity</button>
 				<button type="button" class="btn btn-secondary" id="marsApiSpirit">Spirit</button>

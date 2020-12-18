@@ -1,6 +1,18 @@
 /**
  * 
  */
+
+let userId = getUrlParameter('userId')
+
+if(userId == null || userId == ''){
+	userId = localStorage.getItem('userId')
+}
+
+if(userId != null || userId != '') {
+	localStorage.setItem('userId', userId)
+	document.getElementById('userId').value = userId
+}
+
 // get all the buttons prepended with 'marsApi'
 let marsApiButtons = document.querySelectorAll("button[id*='marsApi']")
 

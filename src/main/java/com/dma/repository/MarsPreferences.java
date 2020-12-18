@@ -1,7 +1,18 @@
-package com.dma.dto;
+package com.dma.repository;
 
-public class HomeDto {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "mars_api_preferences")
+public class MarsPreferences {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String userId;
 	private String marsApiRoverData;
 	private Integer marsSol;
@@ -15,6 +26,14 @@ public class HomeDto {
 	private Boolean cameraPancam;
 	private Boolean cameraMinites;
 	private Boolean rememberPreferences;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setUserId(Long id) {
+		this.id = id;
+	}
 
 	public String getUserId() {
 		return userId;
@@ -122,7 +141,7 @@ public class HomeDto {
 
 	@Override
 	public String toString() {
-		return "HomeDto [userId=" + userId + ", marsApiRoverData=" + marsApiRoverData + ", marsSol="
+		return "HomeDto [id=" + id + ", userId=" + userId + ", marsApiRoverData=" + marsApiRoverData + ", marsSol="
 				+ marsSol + ", cameraFhaz=" + cameraFhaz + ", cameraRhaz=" + cameraRhaz + ", cameraMast=" + cameraMast
 				+ ", cameraChemcam=" + cameraChemcam + ", cameraMahli=" + cameraMahli + ", cameraMardi=" + cameraMardi
 				+ ", cameraNavcam=" + cameraNavcam + ", cameraPancam=" + cameraPancam + ", cameraMinites="
