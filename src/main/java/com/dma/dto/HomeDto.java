@@ -2,7 +2,7 @@ package com.dma.dto;
 
 public class HomeDto {
 
-	private String userId;
+	private Long userId;
 	private String marsApiRoverData;
 	private Integer marsSol;
 	private Boolean cameraFhaz;
@@ -16,11 +16,11 @@ public class HomeDto {
 	private Boolean cameraMinites;
 	private Boolean rememberPreferences;
 
-	public String getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
@@ -122,8 +122,8 @@ public class HomeDto {
 
 	@Override
 	public String toString() {
-		return "HomeDto [userId=" + userId + ", marsApiRoverData=" + marsApiRoverData + ", marsSol="
-				+ marsSol + ", cameraFhaz=" + cameraFhaz + ", cameraRhaz=" + cameraRhaz + ", cameraMast=" + cameraMast
+		return "HomeDto [userId=" + userId + ", marsApiRoverData=" + marsApiRoverData + ", marsSol=" + marsSol
+				+ ", cameraFhaz=" + cameraFhaz + ", cameraRhaz=" + cameraRhaz + ", cameraMast=" + cameraMast
 				+ ", cameraChemcam=" + cameraChemcam + ", cameraMahli=" + cameraMahli + ", cameraMardi=" + cameraMardi
 				+ ", cameraNavcam=" + cameraNavcam + ", cameraPancam=" + cameraPancam + ", cameraMinites="
 				+ cameraMinites + ", rememberPreferences=" + rememberPreferences + "]";

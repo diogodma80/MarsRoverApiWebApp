@@ -12,8 +12,7 @@ public class MarsPreferences {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String userId;
+	private Long userId;
 	private String marsApiRoverData;
 	private Integer marsSol;
 	private Boolean cameraFhaz;
@@ -27,19 +26,11 @@ public class MarsPreferences {
 	private Boolean cameraMinites;
 	private Boolean rememberPreferences;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setUserId(Long id) {
-		this.id = id;
-	}
-
-	public String getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
@@ -141,8 +132,8 @@ public class MarsPreferences {
 
 	@Override
 	public String toString() {
-		return "HomeDto [id=" + id + ", userId=" + userId + ", marsApiRoverData=" + marsApiRoverData + ", marsSol="
-				+ marsSol + ", cameraFhaz=" + cameraFhaz + ", cameraRhaz=" + cameraRhaz + ", cameraMast=" + cameraMast
+		return "MarsPreferences [userId=" + userId + ", marsApiRoverData=" + marsApiRoverData + ", marsSol=" + marsSol
+				+ ", cameraFhaz=" + cameraFhaz + ", cameraRhaz=" + cameraRhaz + ", cameraMast=" + cameraMast
 				+ ", cameraChemcam=" + cameraChemcam + ", cameraMahli=" + cameraMahli + ", cameraMardi=" + cameraMardi
 				+ ", cameraNavcam=" + cameraNavcam + ", cameraPancam=" + cameraPancam + ", cameraMinites="
 				+ cameraMinites + ", rememberPreferences=" + rememberPreferences + "]";

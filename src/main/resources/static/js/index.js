@@ -2,13 +2,16 @@
  * 
  */
 
+
 let userId = getUrlParameter('userId')
 
 if(userId == null || userId == ''){
+	console.log(userId)
 	userId = localStorage.getItem('userId')
 }
 
-if(userId != null || userId != '') {
+if(userId != null && userId != '') {
+	console.log(userId)
 	localStorage.setItem('userId', userId)
 	document.getElementById('userId').value = userId
 }
@@ -32,12 +35,12 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
-let marsRoverType = getUrlParameter("marsApiRoverData")
+let marsRoverType = document.getElementById('marsApiRoverData').value
 highlightButtonByRoverType(marsRoverType)
 
 // sets the input field back to the last number before hitting the submit button instead of fall back to default 1
 
-let marsSol = getUrlParameter('marsSol')
+let marsSol = document.getElementById('marsSol').value
 if(marsSol != null && marsSol != '' && marsSol >= 0) {
 	document.getElementById('marsSol').value = marsSol
 }
